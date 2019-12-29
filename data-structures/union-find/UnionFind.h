@@ -1,4 +1,5 @@
 class UnionFind {
+ private:
   vector<int> rep;
 
  public:
