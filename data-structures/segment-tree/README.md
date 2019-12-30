@@ -6,6 +6,7 @@ https://cp-algorithms.com/data_structures/segment_tree.html
 
 ## Problems:
 https://www.spoj.com/problems/HORRIBLE/
+https://cses.fi/problemset/task/1735
 
 ## Other resources:
 https://codeforces.com/blog/entry/44478?#comment-290116
