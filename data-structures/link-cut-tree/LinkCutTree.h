@@ -82,7 +82,7 @@ class LinkCutTree {
   Node *get(int u) { return s[u].access(); }
 
  public:
-  LinkCutTree(vector<T> v) : n(v.size()), s(n) {
+  LinkCutTree(const vector<T> &v) : n(v.size()), s(n) {
     for (int i = 0; i < n; i++) get(i)->val = v[i];
   }
   bool cut(int u, int v) {

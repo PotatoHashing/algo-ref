@@ -6,7 +6,7 @@ class Fenwick {
 
  public:
   Fenwick(int n) : n(n), v(n) {}
-  Fenwick(vector<T> a) : n(a.size()), v(n) {
+  Fenwick(const vector<T>& a) : n(a.size()), v(n) {
     for (int i = 0; i < n; i++) {
       v[i] = a[i];
       int j = i | (i + 1);

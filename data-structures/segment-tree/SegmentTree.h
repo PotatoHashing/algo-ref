@@ -4,9 +4,9 @@ class SegmentTree {
  private:
   int n;
   vector<T> val, lazy;
-  const T unit = 0;  // identity element
-  T comb(T a, T b) { return a + b; }
-  void build(vector<T> &a, int p, int l, int r) {
+  const T unit = 0;                   // identity element
+  T comb(T a, T b) { return a + b; }  // some associative operation
+  void build(vector<T>& a, int p, int l, int r) {
     if (l == r) {
       val[p] = a[l];
     } else {
@@ -23,7 +23,7 @@ class SegmentTree {
   void pull(int p) { val[p] = comb(val[2 * p], val[2 * p + 1]); }
 
  public:
-  SegmentTree(vector<T> &a) : n(a.size()), val(4 * n), lazy(4 * n) {
+  SegmentTree(const vector<T>& a) : n(a.size()), val(4 * n), lazy(4 * n) {
     build(a, 1, 0, n - 1);
   }
   void update(int l, int r, T x) { update(l, r, x, 1, 0, n - 1); }
