@@ -8,7 +8,7 @@ class SparseTable {
 
  public:
   SparseTable(const vector<T>& a) : n(a.size()), st({a}) {
-    for (int w = 2; w < n; w <<= 1) {
+    for (int w = 2; w <= n; w <<= 1) {
       int hw = w / 2;
       vector<T> nex, pre = st.back();
       for (int i = 0; i + w <= n; i++) {
